@@ -1,4 +1,4 @@
-            Action 
+            Action                                          Bash            PowerShell
 
 # Changer le répertoire 					        		cd			    cd
 # Liste le contenu du répertoire 			        		ls 				ls
@@ -41,3 +41,22 @@ Redirection et tubes
 # Redirection de la sortie vers un fichier (ajouter)		>>			Add--Content
 # Pipe                                                      |               |
 (passe la sortie d'une commande comme entrée à une autre)  	
+
+Affichage
+
+                                                                        Format-Table
+
+
+Parametre d'entree lors le l'execution en console
+
+    parametre anonymes
+                        ./hello.ps1 "John Smith" 42
+                                                                       param(
+                                                                                $variable,
+                                                                                $variable2
+                                                                        )
+    
+    parametre nommes possible d’ajouter des valeurs par défaut          param(
+                                                                                $variable,
+                                                                                $variable2 = 20;
+                                                                            )
