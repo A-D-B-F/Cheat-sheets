@@ -1,0 +1,62 @@
+            Action                                          Bash            PowerShell
+
+# Changer le répertoire 					        		cd			    cd
+# Liste le contenu du répertoire 			        		ls 				ls
+# Affiche le chemin du répertoire actuel  	       			pwd 			pwd
+# Créer un répertoire 						        		mkdir			mkdir
+# Créer un fichier											touch 			New-Item -ItemType File -Path "Chemin\vers\le\fichier.txt"
+# Supprimer un répertoire vide 				        		rmdir			rmdir
+# Supprimer des fichiers 					        		rm              rm
+# Copier des fichiers ou répertoires 		        		cp              cp
+# Déplacer ou renommer des fichiers 		        		mv              mv
+
+Gestion de processus
+
+# Afficher les processus en cours d'exécution       		ps              Get-Process
+# Tuer un processus                                 		kill            Stop-Process
+# Exécuter un processus en arrière-plan             		bg              Start-Process
+# Ramener un processus en premier plan              		fg
+# Afficher les processus en arrière-plan            		jobs
+
+Gestion des utilisateurs et des permissions
+
+# Modifier les permissions d'un fichier             		chmod
+# Changer le propriétaire d'un fichier            			chown
+
+
+# Afficher les informations d'autorisation d'un fichier             		Get-Acl
+# Modifier les autorisations d'un fichier                    			    Set-Acl
+
+# Afficher le nom de l'utilisateur actuel           		whoami          $env:USERNAME
+# Changer le mot de passe de l'utilisateur 					passwd          Set-LocalUser
+
+Variables et environnement
+
+# Définir une variable d'environnement 						export			$env:
+# Afficher du texte 										echo			Write-Output
+
+Redirection et tubes
+
+# Redirection de la sortie vers un fichier (écraser)		>			Out-File
+# Redirection de la sortie vers un fichier (ajouter)		>>			Add--Content
+# Pipe                                                      |               |
+(passe la sortie d'une commande comme entrée à une autre)  	
+
+Affichage
+
+                                                                        Format-Table
+
+
+Parametre d'entree lors le l'execution en console
+
+    parametre anonymes
+                        ./hello.ps1 "John Smith" 42
+                                                                       param(
+                                                                                $variable,
+                                                                                $variable2
+                                                                        )
+    
+    parametre nommes possible d’ajouter des valeurs par défaut          param(
+                                                                                $variable,
+                                                                                $variable2 = 20;
+                                                                            )
